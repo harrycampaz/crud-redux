@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { addProduct } from "../../actions/productActions";
 
 class AddProduct extends Component {
 
@@ -29,25 +27,13 @@ class AddProduct extends Component {
         e.preventDefault();
         const {nombre, precio} = this.state;
 
-      
+        console.log(nombre);
 
         if(nombre === '' || precio === ''){
             this.setState({error: true})
             return;
         }
-
-        this.setState({error: false})
         
-        const infoProduct = {
-            nombre: this.state.nombre,
-            precio: this.state.precio
-        }
-
-        console.log(infoProduct);
-
-        this.props.addProduct(infoProduct);
-
-        this.props.history.push('/');
     }
 
     render() {
@@ -79,4 +65,4 @@ class AddProduct extends Component {
     }
 }
 
-export default connect(null, {addProduct})(AddProduct);
+export default AddProduct;

@@ -29,7 +29,7 @@ class AddProduct extends Component {
         e.preventDefault();
         const {nombre, precio} = this.state;
 
-      
+        console.log(nombre);
 
         if(nombre === '' || precio === ''){
             this.setState({error: true})
@@ -38,16 +38,6 @@ class AddProduct extends Component {
 
         this.setState({error: false})
         
-        const infoProduct = {
-            nombre: this.state.nombre,
-            precio: this.state.precio
-        }
-
-        console.log(infoProduct);
-
-        this.props.addProduct(infoProduct);
-
-        this.props.history.push('/');
     }
 
     render() {

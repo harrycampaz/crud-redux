@@ -46,8 +46,6 @@ class AddProduct extends Component {
         console.log(infoProduct);
 
         this.props.addProduct(infoProduct);
-
-        this.props.history.push('/');
     }
 
     render() {

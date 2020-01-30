@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { showProducts } from "../../actions/productActions";
 import Product from './Product';
 
-
 class Products extends Component {
 
     componentDidMount() {

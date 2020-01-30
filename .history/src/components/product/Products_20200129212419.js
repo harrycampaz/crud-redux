@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { showProducts } from "../../actions/productActions";
 import Product from './Product';
 
-
 class Products extends Component {
 
     componentDidMount() {
@@ -13,8 +12,8 @@ class Products extends Component {
 
 
     render() {
-        const { Products } = this.props;
-        console.log("PROSPS",Products);
+        const { products } = this.props;
+        console.log("PROSPS",this.props);
         
         return (
             <Fragment>
@@ -22,9 +21,9 @@ class Products extends Component {
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <ul>
-                            {Products.map(product => (
+                            {/* {products.map(product => (
                                 <Product key={product.id} product={product} />
-                            ))}
+                            ))} */}
                         </ul>
                     </div>
                 </div>
