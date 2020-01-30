@@ -7,7 +7,6 @@ import Header from './components/Header';
 import Products from './components/product/Products';
 import AddProduct from './components/product/AddProduct';
 import EditProduct from './components/product/EditProduct';
-
 function App() {
   return (
     <Provider store={store}>
@@ -17,8 +16,8 @@ function App() {
           <div>
             <Switch>
               <Route exact path="/" component={Products} />
-              <Route exact path="/add-product" component={AddProduct} />
-              <Route exact path="/products/edit/:id" component={EditProduct} />
+              <Route exact path="add-product" component={AddProduct} />
+              <Route exact path="products/edit/:id" component={EditProduct} />
             </Switch>
           </div>
 
