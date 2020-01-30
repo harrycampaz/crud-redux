@@ -10,26 +10,6 @@ class EditProduct extends Component {
         error: false
     }
 
-    componentDidMount(){
-       
-        this.props.showProduct(this.props.match.params.id);
-        
-
-    }
-
-    UNSAFE_componentWillReceiveProps(){
-        console.log('componentWillReceiveProps');
-    }
-    componentWillReceiveProps(nextProps, nextState){
-
-
-        const {nombre, precio} = nextProps.product;       
-        this.setState({nombre, precio});
-        console.log('componentWillReceiveProps');
-
-    }
-
-
     nameProduct = e => {
 
 
@@ -100,7 +80,7 @@ class EditProduct extends Component {
 }
 
 const mapStateToProsps = state => ({
-    product: state.products.product
+    producto: state.productos.producto
 })
 
 export default connect(mapStateToProsps, {showProduct})(EditProduct);

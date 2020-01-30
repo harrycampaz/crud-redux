@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { showProduct } from "../../actions/productActions";
+import {  } from "../../actions/productActions";
 
 class EditProduct extends Component {
 
@@ -9,26 +9,6 @@ class EditProduct extends Component {
         precio: '',
         error: false
     }
-
-    componentDidMount(){
-       
-        this.props.showProduct(this.props.match.params.id);
-        
-
-    }
-
-    UNSAFE_componentWillReceiveProps(){
-        console.log('componentWillReceiveProps');
-    }
-    componentWillReceiveProps(nextProps, nextState){
-
-
-        const {nombre, precio} = nextProps.product;       
-        this.setState({nombre, precio});
-        console.log('componentWillReceiveProps');
-
-    }
-
 
     nameProduct = e => {
 
@@ -99,8 +79,4 @@ class EditProduct extends Component {
     }
 }
 
-const mapStateToProsps = state => ({
-    product: state.products.product
-})
-
-export default connect(mapStateToProsps, {showProduct})(EditProduct);
+export default connect(null, {})(EditProduct);

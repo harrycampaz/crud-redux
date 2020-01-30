@@ -13,13 +13,11 @@ class EditProduct extends Component {
     componentDidMount(){
        
         this.props.showProduct(this.props.match.params.id);
+        console.log('componentDidMount');
         
 
     }
 
-    UNSAFE_componentWillReceiveProps(){
-        console.log('componentWillReceiveProps');
-    }
     componentWillReceiveProps(nextProps, nextState){
 
 
@@ -28,7 +26,7 @@ class EditProduct extends Component {
         console.log('componentWillReceiveProps');
 
     }
-
+    
 
     nameProduct = e => {
 

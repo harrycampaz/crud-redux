@@ -13,22 +13,19 @@ class EditProduct extends Component {
     componentDidMount(){
        
         this.props.showProduct(this.props.match.params.id);
-        
 
     }
 
-    UNSAFE_componentWillReceiveProps(){
-        console.log('componentWillReceiveProps');
-    }
     componentWillReceiveProps(nextProps, nextState){
 
+       
+        console.log(nextProps);
 
-        const {nombre, precio} = nextProps.product;       
-        this.setState({nombre, precio});
-        console.log('componentWillReceiveProps');
 
+
+        
+        
     }
-
 
     nameProduct = e => {
 

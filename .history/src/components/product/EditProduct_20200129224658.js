@@ -13,6 +13,7 @@ class EditProduct extends Component {
     componentDidMount(){
        
         this.props.showProduct(this.props.match.params.id);
+        console.log('componentDidMount',  this.props.product);
         
 
     }

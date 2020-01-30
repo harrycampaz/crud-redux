@@ -13,8 +13,8 @@ class Products extends Component {
 
 
     render() {
-        const { products } = this.props;
-      
+        const { Products } = this.props;
+        console.log("PROSPS",Products);
         
         return (
             <Fragment>
@@ -22,7 +22,7 @@ class Products extends Component {
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <ul>
-                            {products.map(product => (
+                            {Products.map(product => (
                                 <Product key={product.id} product={product} />
                             ))}
                         </ul>
