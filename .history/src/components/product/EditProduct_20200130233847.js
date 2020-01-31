@@ -10,17 +10,19 @@ function EditProduct(props) {
     const [error, setError] = useState(false)
 
 
-   const  nameProduct = e => {
+    nameProduct = e => {
+
         setNombre(e.target.value)
+
     }
 
 
 
-   const priceProduct = e => {
+    priceProduct = e => {
         setPrecio(e.target.value);
     }
 
-   const  handleEditProduct = e => {
+    handleEditProduct = e => {
         e.preventDefault();
         // const { nombre, precio } = this.state;
         // const nombre = no
@@ -42,9 +44,9 @@ function EditProduct(props) {
 
         console.log(infoProduct);
 
-        // this.props.addProduct(infoProduct);
+        this.props.addProduct(infoProduct);
 
-        // this.props.history.push('/');
+        this.props.history.push('/');
     }
     return (
         <div className="row justify-content-center mt-5">

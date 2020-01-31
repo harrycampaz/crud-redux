@@ -42,9 +42,9 @@ function EditProduct(props) {
 
         console.log(infoProduct);
 
-        // this.props.addProduct(infoProduct);
+        this.props.addProduct(infoProduct);
 
-        // this.props.history.push('/');
+        this.props.history.push('/');
     }
     return (
         <div className="row justify-content-center mt-5">

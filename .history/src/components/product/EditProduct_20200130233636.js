@@ -7,33 +7,33 @@ function EditProduct(props) {
 
     const [nombre, setNombre] = useState('')
     const [precio, setPrecio] = useState('')
-    const [error, setError] = useState(false)
+    conts[error, setError] = useState(false)
 
 
-   const  nameProduct = e => {
+    nameProduct = e => {
+
         setNombre(e.target.value)
+
     }
 
 
 
-   const priceProduct = e => {
+    priceProduct = e => {
         setPrecio(e.target.value);
     }
 
-   const  handleEditProduct = e => {
+    handleEditProduct = e => {
         e.preventDefault();
-        // const { nombre, precio } = this.state;
-        // const nombre = no
+        const { nombre, precio } = this.state;
 
 
 
         if (nombre === '' || precio === '') {
-          
-            setError(true)
+            this.setState({ error: true })
             return;
         }
 
-        setError(false)
+        this.setState({ error: false })
 
         const infoProduct = {
             nombre,
@@ -42,9 +42,9 @@ function EditProduct(props) {
 
         console.log(infoProduct);
 
-        // this.props.addProduct(infoProduct);
+        this.props.addProduct(infoProduct);
 
-        // this.props.history.push('/');
+        this.props.history.push('/');
     }
     return (
         <div className="row justify-content-center mt-5">
@@ -52,14 +52,14 @@ function EditProduct(props) {
                 <div className="card">
                     <div className="card-body">
                         <h2 className="text-center">Agregar Nuevo Producto</h2>
-                        <form onSubmit={handleEditProduct}>
+                        <form onSubmit={this.handleEditProduct}>
                             <div className="form-group">
                                 <label>Titulo</label>
-                                <input onChange={nameProduct} type="text" className="form-control" placeholder="Titulo" />
+                                <input onChange={this.nameProduct} type="text" className="form-control" placeholder="Titulo" />
                             </div>
                             <div className="form-group">
                                 <label>Precio del Producto</label>
-                                <input onChange={priceProduct} type="text" className="form-control" placeholder="Precio" />
+                                <input onChange={this.priceProduct} type="text" className="form-control" placeholder="Precio" />
                             </div>
                             <button type="submit" className="btn btn-primary font-weight-bold text-uppercase d-block w-100">Agregar</button>
                         </form>
