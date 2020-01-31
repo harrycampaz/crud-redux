@@ -13,22 +13,17 @@ class EditProduct extends Component {
     componentDidMount(){
        
         this.props.showProduct(this.props.match.params.id);
-         
+        
+        console.log(this.props);
+        
 
     }
+
+    
+
 
     componentWillReceiveProps(nextProps, nextState){
         console.log(nextProps);
-
-        console.log('llego algo');
-        
-        
-    }
-
-    componentWillUpdate(){
-        console.log('llego update');
-
-        console.log(this.props);
         
     }
 

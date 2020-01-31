@@ -13,24 +13,20 @@ class EditProduct extends Component {
     componentDidMount(){
        
         this.props.showProduct(this.props.match.params.id);
-         
+        
 
     }
 
-    componentWillReceiveProps(nextProps, nextState){
-        console.log(nextProps);
+    
 
-        console.log('llego algo');
-        
-        
-    }
+   static getDerivedStateFromProps(props, stat) {
+    // ...
 
-    componentWillUpdate(){
-        console.log('llego update');
+    console.log(this.props);
+    
+    return null;
+  }
 
-        console.log(this.props);
-        
-    }
 
     nameProduct = e => {
 
@@ -101,8 +97,8 @@ class EditProduct extends Component {
     }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProsps = state => ({
     product: state.products.product
 })
 
-export default connect(mapStateToProps, {showProduct})(EditProduct);
+export default connect(mapStateToProsps, {showProduct})(EditProduct);

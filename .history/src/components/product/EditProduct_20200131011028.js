@@ -27,9 +27,6 @@ class EditProduct extends Component {
 
     componentWillUpdate(){
         console.log('llego update');
-
-        console.log(this.props);
-        
     }
 
     nameProduct = e => {
