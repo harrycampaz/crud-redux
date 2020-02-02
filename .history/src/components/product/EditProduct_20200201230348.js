@@ -21,7 +21,7 @@ class EditProduct extends Component {
         console.log(nextProps);
 
         console.log('llego algo');
-         
+        
          
     }
 
